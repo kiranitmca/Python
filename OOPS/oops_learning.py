@@ -18,3 +18,12 @@ s1.marks = 85
 s1.sex = "Female"
 
 s1.display()
+
+class multi:
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+    def display(self):
+        print(f"Multiplication: {self.a * self.b}")
+m1 = multi(5, 10)
+m1.display()
