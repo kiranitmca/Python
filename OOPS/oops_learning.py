@@ -57,13 +57,90 @@
 
 # @staticmethod declaration and usage 
 
-class Calculator:
-    def __init__(self):
-        self.a = None
-        self.b = None
-    @staticmethod
-    def add(a, b):
-        return a + b
-c1 = Calculator()
-result = c1.add(5, 10)
-print(f"Addition: {result}")
+# class Calculator:
+#     def __init__(self):
+#         self.a = None
+#         self.b = None
+#     @staticmethod
+#     def add(a, b):
+#         return a + b
+# c1 = Calculator()
+# result = c1.add(5, 10)
+# print(f"Addition: {result}")
+
+
+# Encapsulation in Python
+
+# class Student:
+#     def __init__(self,name,age,marks):
+#         self.name=name
+#         self.age=age
+#         self.marks=marks
+#     def display(self):
+#         print(f"Name: {self.name}")
+#         print(f"Age: {self.age}")
+#         print(f"Marks: {self.marks}")
+# s1 = Student("Alice", 20, 85)
+# s1.marks = 90
+# s1.display()
+
+# class BankAccount:
+#     def __init__(self,balanace):
+#         self.__balance = balanace
+    
+#     def get_balance(self):
+#         return self.__balance
+    
+#     def deposit(self,amount):
+#         if amount > 10:
+#             self.__balance += amount
+#             print(f"Deposited: {amount}")
+#         else:
+#             print("Minimum deposit amount is 10")
+
+#     def withdraw(self,amount):
+#         if amount > 0 and amount <= self.__balance:
+#             self.__balance -+ amount
+#             print(f"Withdrawn: {amount}")
+#         else:
+#             print("Invalid withdrawal amount or insufficient balance")
+# account = BankAccount(500)
+# print(f"Initial Balance: {account.get_balance()}") 
+# account.deposit(5)
+# print(f"Balance after deposit: {account.get_balance()}") 
+
+# Inheritance in Python
+
+# Single Inheritance
+# class Animal:
+#     def speaks(self):
+#         print("Animal makes a sound")
+# class Dog(Animal):
+#     def speak(self):
+#         print("Dog barks")
+
+# d1= Dog()
+# d1.speak()
+# d1.speaks()
+
+class Animal:
+    def __init__(self, name):
+        self.name=name
+    def eat(self):
+        print(f"{self.name} is eating")
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} barks")
+
+class Cat(Animal):
+    def speak(self):
+        print(f"{self.name} meows")
+d1 = Dog("Buddy")
+d1.eat()    
+d1.speak()
+c1= Cat("Whiskers")
+c1.eat()    
+c1.speak()
+
+        
+        
